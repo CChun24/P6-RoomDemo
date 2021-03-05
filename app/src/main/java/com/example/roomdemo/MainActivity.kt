@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 val studentDAO = StudentDB.getDatabase(application).studentDAO()
                 val studentList: Array<Student> = studentDAO.getAllStudent()
 
-                if(!studentList.isEmpty()) {
+                if(studentList.isNotEmpty()) {
                     for (s:Student in studentList)
                         name += s.name
                 }
